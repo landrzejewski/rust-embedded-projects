@@ -1,0 +1,4 @@
+cargo generate esp-rs/esp-idf-template cargo
+
+esp-generate --chip esp32s3 base-no-std
+
