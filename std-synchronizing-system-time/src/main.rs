@@ -40,7 +40,7 @@ fn main() -> anyhow::Result<()> {
         let system_time = SystemTime::now();
         let local_time: DateTime<Local> = system_time.clone().into();
         let utc_time: DateTime<Utc> = system_time.clone().into();
-        let offest = FixedOffset::east_opt(3600).unwrap();
+        let offset = FixedOffset::east_opt(3600).unwrap();
         log::info!("Local: {}", local_time.with_timezone(&offest));
         log::info!("Utc: {utc_time}");
         FreeRtos::delay_ms(5_000);
