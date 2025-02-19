@@ -6,7 +6,10 @@ esp-generate --chip esp32s3 base-no-std
 https://doc.rust-lang.org/book
 https://doc.rust-lang.org/rust-by-example
 https://rust-for-rustaceans.com
+
 https://marabos.nl/atomics
 https://www.amazon.com/Async-Rust-Unleashing-Fearless-Concurrency/dp/1098149092
 https://www.theembeddedrustacean.com
 https://www.manning.com/books/write-powerful-rust-macros
+
+https://dev.to/mtnmts/containerized-builds-for-rust-on-the-esp32-e8m
