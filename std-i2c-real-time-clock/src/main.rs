@@ -12,16 +12,6 @@ use nobcd::BcdNumber;
 
 const DS_ADDRESS: u8 = 0x68;
 
-enum TimeElements {
-    Seconds = 0,
-    Minutes,
-    Hours,
-    Day,
-    Month,
-    Year,
-    DayOfWeek,
-}
-
 fn main() {
     link_patches();
     EspLogger::initialize_default();
@@ -33,7 +23,7 @@ fn main() {
     let config = I2cConfig::new().baudrate(100_u32.kHz().into());
     let mut ds = I2cDriver::new(i2c, sda, scl, &config).unwrap();
 
-    let start_time: [u8; 7] = [0, 15, 12, 19, 2, 25, 3];
+    let start_time: [u8; 7] = [0, 15, 12, 3, 19, 2, 25];
 
     for (idx, element) in start_time.iter().enumerate() {
         let bytes: [u8; 1] = BcdNumber::new(*element).unwrap().bcd_bytes();
