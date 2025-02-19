@@ -5,6 +5,8 @@ esp-generate --chip esp32s3 base-no-std
 
 https://doc.rust-lang.org/book
 https://doc.rust-lang.org/rust-by-example
+
+
 https://rust-for-rustaceans.com
 
 https://marabos.nl/atomics
